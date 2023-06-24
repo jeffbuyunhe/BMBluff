@@ -1,0 +1,40 @@
+.room-list-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-list {
+  width: 60%;
+  margin: 20px auto;
+  background-color: #ebf7ff;
+  border-radius: 8px;
+  overflow: scroll;
+  max-height: 90vh;
+  border: 2px #41a2e2 solid;
+}
+
+.room-list-create {
+  margin: 10px auto;
+}
+
+.room-list-input {
+  font-family: "Outfit";
+  font-size: 24px;
+  border: 2px #41a2e2 solid;
+  border-radius: 5px;
+  margin: 0px 5px;
+}
+
+.btn-room-list {
+  font-size: 24px;
+  margin: 0px 5px;
+}
+
+.btn-room-list:hover {
+  transform: scale(1.05);
+}
+
+.btn-room-list:active {
+  transform: scale(0.95);
+}

@@ -1,0 +1,33 @@
+.room-list-item-container {
+  margin: 10px 0px 10px 0px;
+  padding: 0px 30px 10px;
+  border-bottom: 1px lightgray solid;
+}
+
+.room-list-name {
+  font-size: 24px;
+  color: navy;
+  margin-bottom: 6px;
+}
+
+.room-list-owner {
+  font-size: 16px;
+  color: darkslategray;
+  margin-bottom: 4px;
+}
+
+.btn-room {
+  font-size: 20px;
+  width: 90px;
+  height: 35px;
+  float: right;
+  margin-right: 20px;
+}
+
+.btn-room:hover {
+  transform: scale(1.05);
+}
+
+.btn-room:active {
+  transform: scale(0.95);
+}

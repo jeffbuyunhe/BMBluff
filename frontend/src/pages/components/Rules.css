@@ -1,0 +1,50 @@
+.rules-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.rules-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.rules-title {
+  font-size: 54px;
+  margin: 30px auto 10px auto;
+}
+
+.rules-subtitle {
+  font-size: 28px;
+  margin: 30px auto 40px auto;
+}
+
+.rules-image {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0px auto;
+}
+
+.rules-paragraph {
+  font-size: 22px;
+  text-align: center;
+  line-height: 2;
+  margin: 30px 30px 0px 30px;
+}
+
+/*<a href="https://www.flaticon.com/free-icons/playing-cards" title="playing cards icons">Playing cards icons created by Freepik - Flaticon</a>*/
+#card-image {
+  background-image: url("../../assets/playing-cards.png");
+}
+
+/*<a href="https://www.flaticon.com/free-icons/bet" title="Bet icons">Bet icons created by Freepik - Flaticon</a>*/
+#bet-image {
+  background-image: url("../../assets/bet.png");
+}
+
+/*<a href="https://www.flaticon.com/free-icons/gambling" title="gambling icons">Gambling icons created by Nikita Golubev - Flaticon</a>*/
+#winner-image {
+  background-image: url("../../assets/winner.png");
+}

@@ -1,0 +1,48 @@
+.notification-list {
+  height: 200px;
+  overflow: scroll;
+  width: 1600px;
+  margin: 10px auto;
+  border: 2px #41a2e2 solid;
+  background-color: #ebf7ff;
+  border-radius: 8px;
+}
+
+#game-canvas {
+  position: relative;
+  margin: 0 auto;
+}
+
+.room-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.room-title {
+  font-size: 24px;
+  margin: 8px 0px 0px 30px;
+}
+
+.room-header-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-leave-room {
+  margin: 8px 30px 8px auto;
+  height: 45px;
+  font-family: "Outfit";
+  border-radius: 4px;
+  background-color: white;
+  color: rgb(8, 49, 75);
+  border-color: rgb(8, 49, 75);
+  font-size: 24px;
+}
+
+.btn-leave-room:hover {
+  transform: scale(1.05);
+}
+
+.btn-leave-room:active {
+  transform: scale(0.95);
+}

@@ -1,0 +1,67 @@
+version: "3.7"
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./certs:/etc/nginx/certs
+      - ./vhost:/etc/nginx/vhost.d
+      - ./html:/usr/share/nginx/html
+    labels:
+      - "com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy"
+  nginx-proxy-acme:
+    image: nginxproxy/acme-companion
+    container_name: nginx-proxy-acme
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./certs:/etc/nginx/certs
+      - ./vhost:/etc/nginx/vhost.d
+      - ./html:/usr/share/nginx/html
+      - ./acme:/etc/acme.sh
+    environment:
+      - DEFAULT_EMAIL=hwansung595@gmail.com
+    depends_on:
+      - "nginx-proxy"
+  redis:
+    restart: always
+    image: redislabs/redismod:latest
+    ports:
+      - 6379:6379
+    command:
+      - /bin/sh
+      - -c
+      - redis-server --save 20 1 --loglevel warning --requirepass $${REDIS_PASS:?REDIS_PASS variable is not set}
+    environment:
+      - REDIS_PASS=REPLACE_ME
+    volumes:
+      - redis-volume:/data
+  frontend:
+    image: ghcr.io/uoft-utsc-cs-sandbox/poker-frontend-hwangso595:latest
+    container_name: frontend
+    restart: always
+    expose:
+      - 80
+    environment:
+      - VIRTUAL_HOST=bluffs.games
+      - LETSENCRYPT_HOST=bluffs.games
+  backend:
+    image: ghcr.io/uoft-utsc-cs-sandbox/poker-backend-hwangso595:latest
+    container_name: backend
+    restart: always
+    depends_on:
+      - redis
+    expose:
+      - 3000
+    environment:
+      - VIRTUAL_HOST=api.bluffs.games
+      - LETSENCRYPT_HOST=api.bluffs.games
+      - NODE_ENV=production
+      - REDIS_URI=REPLACE_ME
+      - FRONTEND_URL=https://bluffs.games
+volumes:
+  redis-volume:

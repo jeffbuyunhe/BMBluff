@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+body {
+  font-family: "Outfit";
+  margin: 0px;
+  min-width: 900px;
+}
+
+.whole-page {
+  height: 100vh;
+}
+
+.btn-simple {
+  font-family: "Outfit";
+  background-color: white;
+  color: rgb(8, 49, 75);
+  border-color: rgb(8, 49, 75);
+  border-radius: 4px;
+}

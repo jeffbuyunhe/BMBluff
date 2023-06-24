@@ -1,0 +1,43 @@
+/* btn generated from https://devsdash.com/tools/css-button-generator */
+.btn-sign-in {
+  background: linear-gradient(to right, #13437b, #339dff);
+  background-color: #13437b;
+  color: #fff;
+  font-family: "Outfit";
+  font-size: 24px;
+  font-style: normal;
+  text-decoration: none;
+  padding: 14px 15px;
+  border: 0px solid #000;
+  border-radius: 10px;
+  display: inline-block;
+  width: 300px;
+}
+.btn-sign-in:hover {
+  background: linear-gradient(to right, #53678e, #5ea9ff);
+  background-color: #53678e;
+}
+.btn-sign-in:active {
+  transform: scale(0.95);
+}
+
+.home-banner {
+  height: 100vh;
+}
+
+.home-banner-text {
+  font-size: 48px;
+  color: white;
+}
+
+.home-banner-text-container {
+  justify-content: center;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  top: 0;
+  left: 0px;
+  right: 0px;
+}
