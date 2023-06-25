@@ -32,3 +32,8 @@ BMBluff could not have been made without:
 - Sung Ha Hwang (Tensorflow, PeerJS)
 - Jeff He (React, P5.js, Socket.IO)
 - Naman Bhandari (Socket.IO, Redis, Auth0)
+
+# Screenshots
+![alt text](https://github.com/jeffbuyunhe/BMBluff/blob/main/Demo/Landing.png)
+![alt text](https://github.com/jeffbuyunhe/BMBluff/blob/main/Demo/Lobby.png)
+![alt text](https://github.com/jeffbuyunhe/BMBluff/blob/main/Demo/Game.png)
