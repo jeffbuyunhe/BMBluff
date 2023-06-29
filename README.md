@@ -6,7 +6,7 @@ The rules are based on https://bicyclecards.com/how-to-play/indian-poker/
 
 Users can create an account, and search for a virual room to join.
 
-All users start with 5000 chips upon joining. When the round starts, the users put onecard (without looking) to their webcam. Tensorflow will attempt to analyze their card, and display it.
+All users start with 5000 chips upon joining. When the round starts, the users put one card (without looking) to their webcam. Tensorflow will attempt to analyze their card, and display it.
 If Tensorflow cannot detect an accurate card, it will assign that player a random card
 
 The players can see, through videocalls, what the other players have on their forehead. Each players own video will not be shown to themselves.
